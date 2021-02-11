@@ -10,6 +10,14 @@ import './App.css'
 // Import store and wrap app with redux provider
 // import store from './store'
 
+//  PROCESO, PASOS:
+// 1. Definición: (dibujando, Adobe XD ...) -> Home con resumen de preguntas / Cards de preguntas / Formulario añadir preguntas /
+// 2. Tareas:
+// 2.1. Añadir datos fake
+// 2.1. Home: ruta y componente
+// 2.2. Card: ruta y componente
+// 2.3. Add Question: ruta y componente
+
 function App() {
   return (
     <div className="App">
