@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Home from 'pages/Home'
+import Questions from 'pages/Questions'
 import './App.css'
 
 // REDUX
@@ -12,9 +13,10 @@ import './App.css'
 // 1. Definición: (dibujando, Adobe XD ...) -> Home con resumen de preguntas / Cards de preguntas / Formulario añadir preguntas /
 // 2. Tareas:
 // -> 2.1. Añadir datos fake
-// 2.1. *** Home: ruta y componente ***
-// 2.2. Card: ruta y componente
-// 2.3. Add Question: ruta y componente
+// -> 2.2. Home: ruta y componente
+// 2.3. *** Question: ruta y componente ***
+// 2.4. Add Question: ruta y componente
+// 2.5. Añadir barra de navegación: ruta y componente
 
 function App() {
 
@@ -54,6 +56,11 @@ function App() {
                 html={countQuestions('Html')}
                 javascript={countQuestions('Javascript')}
                 react={countQuestions('React')}></Home>
+            )}
+            />
+            <Route path="/questions" render={(props) => (
+              <Questions
+                questions={allQuestions}></Questions>
             )}
             />
           </Switch>
