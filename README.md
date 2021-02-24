@@ -6,6 +6,7 @@
 
 ## 🔖 Table of Contents
 
+- [Steps](#steps)
 - [Getting Started](#getting-started)
 - [Prerequisites](#Prerequisites)
 - [VS Code Plugins](#vs-code-plugins)
@@ -13,6 +14,20 @@
 - [File Structure](#file-structure)
 - [Naming Conventions](#naming-conventions)
 - [Resources](#resources)
+
+
+## 🚀 Steps
+
+- 1. Definición: (dibujando, Adobe XD ...) -> Se necesita: Home con resumen de preguntas / Cards de preguntas / Formulario añadir preguntas /
+- 2. Enumerar tareas para alcanzar nuestro objetivo:
+  - 2.1. Añadir datos fake
+  - 2.2. Home: ruta y componente
+  - 2.3. *** Question: ruta y componente ***
+  - 2.4.!!! instalar bootstrap - maquetar???
+  - 2.5. Add Question: ruta y componente
+  - 2.6. Añadir barra de navegación: ruta y componente
+
+- 3. Comenzar a resolver tareas, teniendo el foco del objetivo de cada tarea, es importante ir cerrando temas.
 
 ## 🚀 Getting Started
 
