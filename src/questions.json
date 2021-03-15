@@ -1,0 +1,17 @@
+[
+  {
+    "question":"Queeeeeeeeé significa !important",
+    "answer":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+    "type":"Html"
+  },
+  {
+    "question":"Qué significa ES6?",
+    "answer":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+    "type":"Javascript"
+  },
+  {
+    "question":"Qué son los props?",
+    "answer":"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,",
+    "type":"React"
+  }
+]

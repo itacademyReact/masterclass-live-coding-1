@@ -1,33 +1,49 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import axios from 'axios';
 
 import Home from 'pages/Home'
-import About from 'pages/About'
-import logo from 'assets/logo.svg'
+import Questions from 'pages/Questions'
 import './App.css'
 
-// REDUX
-// Import store and wrap app with redux provider
-// import store from './store'
-
-//  PROCESO, PASOS:
-// 1. Definición: (dibujando, Adobe XD ...) -> Home con resumen de preguntas / Cards de preguntas / Formulario añadir preguntas /
-// 2. Tareas:
-// 2.1. Añadir datos fake
-// 2.1. Home: ruta y componente
-// 2.2. Card: ruta y componente
-// 2.3. Add Question: ruta y componente
+// Fake data from json
+//import jsonData from 'data/questions.json'
 
 function App() {
+
+  const [allQuestions, setQuestions] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const result = await axios.get('http://localhost:3000/questions');
+      setQuestions(result.data);
+    };
+    fetchData();
+  }, []);
+
+  const countQuestions = (filter) => {
+    console.log("allQuestions!!", allQuestions);
+    return allQuestions.filter(question => filter ? question.type === filter : question).length;
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>React Starter Kit</h2>
         <Router>
           <Switch>
-            <Route exact path="/" component={Home} />
-            <Route path="/about" component={About} />
+            <Route exact path="/" render={(props) => (
+              <Home
+                total={countQuestions()}
+                html={countQuestions('Html')}
+                javascript={countQuestions('Javascript')}
+                react={countQuestions('React')}></Home>
+            )}
+            />
+            <Route path="/questions" render={(props) => (
+              <Questions
+                questions={allQuestions}></Questions>
+            )}
+            />
           </Switch>
         </Router>
       </header>

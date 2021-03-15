@@ -1,27 +1,20 @@
 import React, { Fragment } from 'react'
-import { Link } from 'react-router-dom'
+import {
+  Link
+} from "react-router-dom";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <Fragment>
+      <h1>Home</h1>
+      <Link to="/questions">Questions</Link>
       <p>
-        <span>Edit </span>
-        <code>src/App.js </code>
-        <span>and save to reload.</span>
+        Total: {props.total}<br />
+        html: {props.html}<br />
+        javascript: {props.javascript}<br />
+        react: {props.react}<br />
       </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
-      <Link to="/about">
-        <a className="App-link" href="/#">
-          About
-        </a>
-      </Link>
+
     </Fragment>
   )
 }
